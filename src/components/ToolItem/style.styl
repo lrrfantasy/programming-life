@@ -1,0 +1,74 @@
+.toolItem
+  display: flex
+  position: relative
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  margin: 20px auto
+  padding: 20px 40px
+  border-radius: 10px
+  color: #333
+  background: #efefef
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+
+.notPurchased
+  &:after
+    content: '\f05e'
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    border-radius: 10px
+    color: #d0104c
+    background: rgba(255, 255, 255, 0.8)
+    font-family: FontAwesome
+    font-size: 80px
+    text-align: center
+    line-height: 120px
+
+.toolIcon
+  padding-left: 20px
+  width: 10%
+  font-size: 32px
+
+.toolDetail
+  width: 70%
+
+.toolTitle
+  font-size: 28px
+
+.toolTitle, .toolStars, .toolDesc
+  margin: 10px 0
+
+.toolDesc
+  font-size: 20px
+
+.toolUpgrade
+  font-size: 20px
+
+.toolUpgradeButton
+  display: inline-block
+  margin: 0 10px
+  padding: 10px 20px
+  background: #d0104c
+  border-radius: 20px
+  color: white
+  cursor: pointer
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+  &:hover
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.6)
+  &:active
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6)
+
+.disable
+  background: #888
+  cursor: default
+  &:hover
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+  &:active
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+
+.toolUpgradePrice
+  margin: 0 10px

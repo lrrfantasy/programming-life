@@ -1,0 +1,64 @@
+.studyOrders
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.studyOrder
+  position: relative
+  margin: 20px auto
+  padding: 20px 60px
+  border-radius: 10px
+  color: #333
+  background: #efefef
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+  text-align: center
+  cursor: pointer
+  &:hover
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.6)
+  &:active
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6)
+
+.disable
+  &:after
+    content: '\f05e'
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+    border-radius: 10px
+    color: #d0104c
+    background: rgba(255, 255, 255, 0.8)
+    font-family: FontAwesome
+    font-size: 80px
+    text-align: center
+    line-height: 200px
+    cursor: default
+  &:hover
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+  &:active
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+
+.studyPay
+  width: 80px
+  height: 80px
+  border-radius: 50%
+  color: #fff
+  background: #00aa90
+  font-size: 36px
+  text-align: center
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+  span
+    margin: 0
+    line-height: 80px
+
+.studySkill
+  display: block
+  color: #00aa90
+  font-size: 28px
+
+.studyPay,
+.studySkill,
+.studyTime
+  margin: 15px auto

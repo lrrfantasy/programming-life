@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 
 import Homepage from './containers/Homepage'
+import DebugPage from './containers/DebugPage'
 import configure from './store'
 
 import './styles/main.styl'
@@ -19,8 +20,8 @@ const history = syncHistoryWithStore(hashHistory, store)
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Route path='/' component={Homepage}>
-      </Route>
+      <Route path='/' component={Homepage} />
+      <Route path='/debug' component={DebugPage} />
     </Router>
   </Provider>,
   document.getElementById('root')

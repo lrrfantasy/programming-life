@@ -18,6 +18,7 @@ export default class EventProgress extends Component {
 
   componentDidMount () {
     this.props.getEvent()
+    this.handleEventComplete()
   }
 
   shouldComponentUpdate (nextProps) {
@@ -25,8 +26,12 @@ export default class EventProgress extends Component {
   }
 
   componentDidUpdate () {
-    const { during, timestamp } = this.props.event
-    if (Math.floor((Date.now() - timestamp) / 1000) === during) {
+    this.handleEventComplete()
+  }
+
+  handleEventComplete () {
+    const { during, timestamp, status } = this.props.event
+    if (Math.floor((Date.now() - timestamp) / 1000) >= during && status === 'running') {
       this.props.sendEventCompletable()
     }
   }

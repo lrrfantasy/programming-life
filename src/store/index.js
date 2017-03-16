@@ -1,6 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
 
-import promiseMiddleware from 'redux-promise'
 import thunk from 'redux-thunk'
 import { logger } from '../middleware'
 import rootReducer from '../reducers'
@@ -15,11 +14,10 @@ export default function configure(initialState, processEnv) {
   if (env === 'development') {
     createStoreWithMiddleware = applyMiddleware(
       logger,
-      thunk,
-      promiseMiddleware
+      thunk
     )(create)
   } else {
-    createStoreWithMiddleware = applyMiddleware(promiseMiddleware, thunk)(create)
+    createStoreWithMiddleware = applyMiddleware(thunk)(create)
   }
 
   const store = createStoreWithMiddleware(rootReducer, initialState)

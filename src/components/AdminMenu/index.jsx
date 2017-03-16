@@ -14,7 +14,7 @@ export default class AdminMenu extends Component {
   render () {
     return (
       <Container classes={[style.admin]}>
-        <Button disabled={false} handleClick={this.props.init} icon='rocket' text='Init' />
+        <Button handleClick={this.props.init} icon='rocket' text='Init' />
       </Container>
     )
   }

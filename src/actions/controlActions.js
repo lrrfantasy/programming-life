@@ -6,13 +6,10 @@ import { randomSomeOf } from '../utils/common'
 import storage from '../utils/storage'
 import prepareWorkOrder from '../utils/prepareWorkOrder'
 
-export const activePanel = createAction('active panel', panel => {
-  return { panel }
-})
+export const activePanel = createAction('active panel', panel => ({ panel }))
 
 export const fetchWorkOrder = createAction('fetch work order', () => {
-  const workOrder = storage.get('workOrder')
-  return { workOrder }
+  return { workOrder: storage.get('workOrder') }
 })
 
 export const work = createAction('work', work => {

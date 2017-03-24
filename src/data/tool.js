@@ -113,6 +113,44 @@ const tools = [
         }
       }
     ]
+  },
+  {
+    type: 'membership',
+    icon: 'credit-card',
+    levels: [
+      {
+        level: 1,
+        name: 'Bookshop Membership Card',
+        description: 'Reduce study cost by 5%',
+        buff: {
+          studyPrice: 0.05
+        }
+      },
+      {
+        level: 2,
+        name: 'Bookshop Silver Membership Card',
+        description: 'Reduce study cost by 10%',
+        buff: {
+          studyPrice: 0.1
+        }
+      },
+      {
+        level: 3,
+        name: 'Bookshop Golden Membership Card',
+        description: 'Reduce study cost by 15%',
+        buff: {
+          studyPrice: 0.15
+        }
+      },
+      {
+        level: 4,
+        name: 'Bookshop Platinum Membership Card',
+        description: 'Reduce study cost by 20%',
+        buff: {
+          studyPrice: 0.2
+        }
+      }
+    ]
   }
 ]
 

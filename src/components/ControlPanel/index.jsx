@@ -44,7 +44,7 @@ export default class ControlPanel extends Component {
       <Container>
         <ul>
           <Button disabled={isInProgress} handleClick={::this.work} icon='briefcase' text='Work' />
-          <Button disabled={isInProgress} handleClick={::this.sleep} icon='bed' text='Sleep' />
+          <Button disabled={isInProgress} handleClick={::this.sleep} icon='bed' text='Rest' />
           <Button disabled={isInProgress} handleClick={::this.study} icon='book' text='Study' />
           <Button disabled={!isCompletable} handleClick={::this.props.completeEvent} icon='check' text='Done' />
           <Button handleClick={::this.tool} icon='wrench' text='Tool' />

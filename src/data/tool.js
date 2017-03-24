@@ -75,6 +75,44 @@ const tools = [
         }
       },
     ]
+  },
+  {
+    type: 'bathtub',
+    icon: 'bathtub',
+    levels: [
+      {
+        level: 1,
+        name: 'Stone Bathtub',
+        description: 'Increase energy gain from rest by 5%',
+        buff: {
+          energyGain: 0.05
+        }
+      },
+      {
+        level: 2,
+        name: 'Ceramic Bathtub',
+        description: 'Increase energy gain from rest by 10%',
+        buff: {
+          energyGain: 0.1
+        }
+      },
+      {
+        level: 3,
+        name: 'Copper Bathtub',
+        description: 'Increase energy gain from rest by 15%',
+        buff: {
+          energyGain: 0.15
+        }
+      },
+      {
+        level: 4,
+        name: 'Silver Bathtub',
+        description: 'Increase energy gain from rest by 20%',
+        buff: {
+          energyGain: 0.2
+        }
+      }
+    ]
   }
 ]
 

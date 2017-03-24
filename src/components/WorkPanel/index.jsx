@@ -26,12 +26,12 @@ export default class WorkPanel extends Component {
 
   render () {
     const laptop = findToolByNameLevel('laptop', this.props.status.tool.laptop)
-    const duringReduce = 1 - (!!laptop ? laptop.buff.workingTime : 0)
+    const duringRate = 1 - (!!laptop ? laptop.buff.workingTime : 0)
     const workOrderList = this.props.workOrder.map((workOrder, i) => {
       const { name, during, energy, skills, pay } = workOrder
       const energyHave = this.props.status.energy.value
-      const reduceDuring = Math.floor(during * duringReduce)
-      const actualWorkOrder = { ...workOrder, reduceDuring }
+      const reducedDuring = Math.floor(during * duringRate)
+      const actualWorkOrder = { ...workOrder, reducedDuring }
 
       const skillList = skills.map((skill, idx) => {
         const { name, level } = skill
@@ -51,7 +51,7 @@ export default class WorkPanel extends Component {
           <div className={style.workDetail}>
             <h3 className={style.workTitle}>{name}</h3>
             <ul className={style.workRequirements}>
-              <TimeLabel text={timeFormat(reduceDuring)} />
+              <TimeLabel text={timeFormat(reducedDuring)} />
               <EnergyLabel className={energyClass} text={energy} />
               {skillList}
             </ul>

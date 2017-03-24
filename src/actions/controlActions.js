@@ -13,13 +13,13 @@ export const fetchWorkOrder = createAction('fetch work order', () => {
 })
 
 export const work = createAction('work', work => {
-  const { energy, skills, during, reduceDuring, pay } = work
+  const { energy, skills, during, reducedDuring, pay } = work
   const event = {
     type: 'work',
     energy: -energy,
     skills,
     skill: during,
-    during: reduceDuring,
+    during: reducedDuring,
     pay,
     timestamp: Date.now(),
     status: 'running'
